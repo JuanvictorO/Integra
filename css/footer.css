@@ -1,0 +1,80 @@
+footer{
+	background-color: #f2f2f2;
+	border-top: 1px rgba(0,0,0,0.25) solid;
+}
+.img-footer{
+	width: 60px;
+	height: 60px;
+}
+.div-footer1{
+	font-size: 0.8em;
+}
+.rede-social{
+	background-color: #D3D3D3;
+}
+
+ul.social-network {
+	list-style: none;
+	display: inline;
+}
+ul.social-network li {
+	display: inline;
+}
+.social-circle li a {
+	display:inline-block;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i {
+	line-height:50px;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color: black;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+.rede-social1:hover{
+	background-color: #f33b9b;
+}
+.rede-social2:hover{
+	background-color: #3B5998;
+}
+.rede-social3:hover{
+	background-color: #33ccff;
+}
+.rede-social:hover i{
+	color: #fff;
+}
+.rede-social-mobile{
+	width: 15px !important;
+}
+@media screen and (min-width: 992px){
+	.div-footer1{
+		padding-top: 12px;
+	}
+}
+@media screen and (max-width: 991px){
+	.dropdown-menu{
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+	}
+}

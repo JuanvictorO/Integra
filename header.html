@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg fixed-top border-top border-bottom">
+            <div class="container-fluid">
+               <a href="index.php">
+                  <img src="img/logos/logo4.png" class="logo img-fluid">
+               </a>
+               <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fas fa-bars"></i>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav mr-auto ml-auto font-weight-bold">
+                     <li class="nav-item li">
+                        <a class="nav-item item mx-4" href="index.php">Página Inicial</a>
+                     </li>
+                     <li class="nav-item dropdown li">
+                        <span class="nav-link dropdown-toggle p-0 menu-animate item mx-4" data-toggle="dropdown" href="index.html" id="config" role="button" aria-haspopup="true" aria-expanded="false">Opções</span>
+                        <ul class="dropdown-menu multi-level font-weight-bold ">
+                           <li class="m-2" data-toggle="modal" data-target="#exampleModalCenter"><a class="animated slideInLeft menu-dropdown-item dropdown-item sub-item delay1 px-2" >Configurações</a></li>
+                           <li id="mode" class="m-2"><a id="mode-text" class="animated slideInLeft submenu menu-dropdown-item sub-item dropdown-item delay2 px-2">Modo escuro</a></li>
+                           <li id="padrao" class="m-2"><a class="animated slideInLeft submenu menu-dropdown-item sub-item dropdown-item delay3 px-2">Desfazer Alterações</a></>
+                        </ul>
+                     </li>
+                     <li class="nav-item li">
+                        <a class="nav-item item mx-4" href="login.php">Farmácias Parceiras</a>
+                     </li>
+                     <li class="nav-item li">
+                        <a class="nav-item item mx-4" href="sobre.php">Sobre</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Configurações de acesso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="./controle/alteracoes.php" method="POST">
+      <div class="modal-body">
+        <div class="form-group ">
+            <label for="tam_fonte" class="font-weight-bold">Tamanho da fonte:</label>
+            <span id="tam_range">16</span><br>
+            <input id="tamanho" type="range" name="tamanho" class="slider" min="16" max="26" value="16">            
+         </div>
+         <label for="cor" class="font-weight-bold">Cor da fonte:</label>
+         <input id="cor" class="ml-2" type="color" name="cor">
+         <input id="url" type="text" name="url" value="index.php" style="display:none;">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button id="alteracoes" type="submit" class="btn btn-primary">Salvar mudanças</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+   ///////MENU ANIMATION ////////////////////////
+         $('.menu-animate').click(function(){
+            $('.dropdown-menu').slideToggle(800);
+         });
+         $('.menu-animate')
+         if($(window).width() < 992){
+           $('.multi-level li').removeClass('m-2');
+           $('.sub-item').addClass('py-0');
+        }
+</script> 
